@@ -4,8 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      input, button {
+        margin: 1vh;
+      }
+    </style>
   </head>
   <body>
-    <form action=""></form>
+    <fieldset>
+      <legend>Basic Information</legend>
+      <form action="">
+        <label for=""
+          >Full Name: <input type="text" minlength="3" required /></label
+        >(at least 3 characters)<br />
+        <label for=""
+          >Email: <input type="email" name="" id="" required /></label
+        ><br />
+        <label for=""
+          >Password:
+          <input type="password" name="" id="" minlength="8" /></label
+        >(at least 8 characters)<br />
+        <label for="dateofbirth"
+          >Date of Birth: <input type="date" name="" id="" /></label
+        ><br />
+        <label for="phonenum"
+          >Phone Number:
+          <input
+            type="tel"
+            placeholder="123456789"
+            pattern="[0-9]{10}"
+            minlength="10"
+          />(10 digits)</label
+        ><br />
+    </fieldset>
+
+    <fieldset>
+        <legend>Adress</legend>
+        <label>Country: <input type="text" name="" id="" required /></label><br>
+        <label for="">City: <input type="text" /></label><br>
+        <label for="Zip Code:">Zip Code: <input type="text" />(5digits)</label><br>
+      </fieldset>
+
+      <button type="submit">Register</button>
+    </form>
   </body>
 </html>
