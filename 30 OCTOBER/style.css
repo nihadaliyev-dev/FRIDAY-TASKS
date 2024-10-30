@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("https://wallpapers.com/images/hd/light-blue-white-gradient-ocp1nxf9y5f7ae47.jpg");
+  background-size: cover;
+}
+h1 {
+  padding: 2vh;
+  font-size: 3em;
+}
+main {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  margin: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 300px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 5px;
+  gap: 15px;
+  justify-content: center;
+}
+.card img {
+  width: 60px;
+}
+.card h3 {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+.card p {
+  font-weight: 600;
+  font-size: 0.9em;
+  width: 90%;
+}
+.card a {
+  padding: 10px 50px;
+  background: black;
+  color: #fbfbfb;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.8em;
+  border-radius: 20px;
+}
