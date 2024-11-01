@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+}
+body {
+  display: flex;
+  height: 100dvh;
+  background-color: #ffffff;
+  align-items: center;
+}
+.main {
+  width: 100%;
+  padding: 42px 24px;
+  display: flex;
+  justify-content: center;
+
+  gap: 24px;
+}
+.boxes {
+  width: 394.67px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px;
+  padding: 64px 42px;
+  .shape {
+    width: 124px;
+    height: 124px;
+    position: relative;
+  }
+  .pink {
+    background-color: #f3afa8;
+    border-radius: 62px 62px 0 0;
+  }
+  .red {
+    background-color: #ff6250;
+    border-radius: 0 124px 0 0;
+  }
+  .cyan {
+    background-color: #009379;
+    border-radius: 0 36px;
+  }
+  .shape img {
+    position: absolute;
+  }
+  #arrow1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #arrow2 {
+    right: 0;
+    top: 10px;
+  }
+  #arrow3 {
+    bottom: 0;
+  }
+  .text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    h4 {
+      font-weight: 600;
+      font-size: 27px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 27px;
+      color: #2d2d2d;
+    }
+  }
+}
