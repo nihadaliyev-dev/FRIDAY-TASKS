@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: auto;
+}
+.container {
+  border: 2px solid black;
+  width: 450px;
+  height: 450px;
+  position: relative;
+}
+.colors {
+  width: 125px;
+  height: 125px;
+  position: absolute;
+}
+#blue {
+  background-color: blue;
+  top: 0;
+  right: 0;
+}
+#red {
+  background-color: red;
+  top: 150px;
+}
+#green {
+  background-color: green;
+  top: 300px;
+  right: 50px;
+}
