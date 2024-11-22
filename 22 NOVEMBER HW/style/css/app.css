@@ -310,6 +310,95 @@
   color: #ffffff;
 }
 
+@media (max-width: 610px) {
+  .navbar__main {
+    padding: 20px 20px !important;
+  }
+  .navbar__main .navbar__main__links {
+    display: none !important;
+  }
+  .navbar__main .navbar__main__btn {
+    display: none !important;
+  }
+  .navbar__main .navbar__burger__mobile {
+    margin: 0 !important;
+  }
+  .navbar__main .navbar__burger__mobile svg {
+    margin: 0px 10px !important;
+    color: #eeeeee;
+  }
+  .first__section__main {
+    text-align: center;
+  }
+  .first__section__main h5 {
+    max-width: 100% !important;
+    font-size: 40px !important;
+    line-height: 42px !important;
+    word-wrap: break-word !important;
+  }
+  .first__section__main .first__section__btn a {
+    max-width: 100% !important;
+    padding: 16px 20px !important;
+  }
+  .second__section__content {
+    max-width: 100%;
+    word-wrap: break-word !important;
+  }
+  .third__section__content {
+    flex-direction: column !important;
+  }
+  .fourth__section__body {
+    display: flex;
+    flex-direction: column;
+  }
+  .fourth__section__body .fourth__section__card {
+    width: 100%;
+  }
+  .fifth__section > div {
+    padding: 0 !important;
+  }
+  .fifth__section__main {
+    text-align: center;
+    margin: 0;
+  }
+  .fifth__section__main img {
+    width: 100% !important;
+    margin: 24px 0 !important;
+    padding: 0 !important;
+  }
+  .fifth__section__main .mobile__down {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .fifth__section__main .mobile__down__main {
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 16px !important;
+  }
+  .sixth__section__main {
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 40px;
+  }
+  .sixth__section__main .sixth__section__leftSide {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .sixth__section__main .sixth__section__leftSide .sixth__section__leftSide__btn {
+    padding: 16px 40px !important;
+  }
+  .footer .footer__main {
+    padding: 12px !important;
+  }
+}
+@media (max-width: 768px) {
+  .fourth__section__header__main {
+    text-align: center;
+  }
+}
 html * {
   font-family: "Inter", sans-serif;
 }
