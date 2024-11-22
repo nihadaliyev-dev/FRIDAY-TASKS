@@ -398,6 +398,26 @@
   .fourth__section__header__main {
     text-align: center;
   }
+  .fifth__section .fifth__section__main {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0;
+  }
+  .fifth__section .fifth__section__main img {
+    width: 100% !important;
+    margin: 24px 0 !important;
+    padding: 0 !important;
+  }
+  .fifth__section .fifth__section__main .mobile__down {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .fifth__section .fifth__section__main .mobile__down__main {
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 16px !important;
+  }
 }
 html * {
   font-family: "Inter", sans-serif;
