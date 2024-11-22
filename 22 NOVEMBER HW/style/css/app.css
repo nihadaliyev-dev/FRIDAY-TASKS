@@ -1,0 +1,319 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+* ul {
+  list-style: none;
+}
+* a {
+  text-decoration: none;
+}
+
+.navbar__main {
+  background-color: #222831;
+}
+.navbar__main .navbar__main__logo {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #eeeeee;
+}
+.navbar__main .navbar__main__links a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #eeeeee;
+}
+.navbar__main .navbar__main__btn a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #eeeeee;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+}
+
+.first__section {
+  background-color: #eeeeee;
+}
+.first__section .first__section__main {
+  padding: 90px 0;
+}
+.first__section .first__section__main .first__section__content h5 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 67px;
+  line-height: 70px;
+  color: #222831;
+}
+.first__section .first__section__main .first__section__content p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  color: #818181;
+}
+.first__section .first__section__main .first__section__btn a {
+  padding: 16px 80px;
+  background-color: #008a90;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #eeeeee;
+}
+
+.second__section {
+  background-color: #222831;
+}
+.second__section .second__section__main {
+  padding: 144px 0;
+}
+.second__section .second__section__main .second__section__header {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: #00adb5;
+}
+.second__section .second__section__main .second__section__content {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 51px;
+  line-height: 61px;
+  color: #eeeeee;
+}
+
+.third__section {
+  background-color: #393e46;
+}
+.third__section .third__section__main {
+  padding: 80px 0;
+}
+.third__section .third__section__main .third__section__header {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 44px;
+  color: #eeeeee;
+}
+.third__section .third__section__main .third__section__content {
+  gap: 40px;
+}
+.third__section .third__section__main .third__section__content .third__section__contentBox {
+  gap: 8px;
+}
+.third__section .third__section__main .third__section__content .third__section__contentBox .third__section__contentBox__header {
+  width: 32px;
+  height: 32px;
+  padding: 18px;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #222831;
+}
+.third__section .third__section__main .third__section__content .third__section__contentBox .third__section__contentBox__body {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #eeeeee;
+}
+.third__section .third__section__main .third__section__content .third__section__contentBox .third__section__contentBox__footer {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.fourth__section {
+  background-color: #222831;
+}
+.fourth__section .fourth__section__main {
+  padding: 120px 0;
+}
+.fourth__section .fourth__section__main .fourth__section__header {
+  gap: 8px;
+  padding-bottom: 40px;
+}
+.fourth__section .fourth__section__main .fourth__section__header .fourth__section__header__main {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 51px;
+  line-height: 61px;
+  color: #eeeeee;
+}
+.fourth__section .fourth__section__main .fourth__section__header .fourth__section__header__child {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+}
+.fourth__section .fourth__section__main .fourth__section__body {
+  padding: 0;
+}
+.fourth__section .fourth__section__main .fourth__section__body .fourth__section__card {
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.fourth__section .fourth__section__main .fourth__section__body .fourth__section__card img {
+  border-radius: 16px 16px 0 0;
+}
+.fourth__section .fourth__section__main .fourth__section__body .fourth__section__card .fourth__section__card__bottom {
+  border-radius: 0 0 16px 16px;
+  background-color: #393e46;
+  padding: 16px;
+}
+.fourth__section .fourth__section__main .fourth__section__body .fourth__section__card .fourth__section__card__bottom .fourth__section__card__header {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #eeeeee;
+}
+.fourth__section .fourth__section__main .fourth__section__body .fourth__section__card .fourth__section__card__bottom .fourth__section__card__content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #eeeeee;
+}
+
+.fifth__section {
+  background-color: #222831;
+}
+.fifth__section .fifth__section__main {
+  padding: 120px 0;
+}
+.fifth__section .fifth__section__main .fifth__section__rightSide__header {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 51px;
+  line-height: 61px;
+  color: #eeeeee;
+}
+.fifth__section .fifth__section__main .fifth__section__rightSide__content {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.sixth__section {
+  background-color: #222831;
+}
+.sixth__section .sixth__section__main {
+  padding: 120px 0;
+}
+.sixth__section .sixth__section__main .sixth__section__leftSide__header {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 51px;
+  line-height: 61px;
+  color: #eeeeee;
+}
+.sixth__section .sixth__section__main .sixth__section__leftSide__content {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+}
+.sixth__section .sixth__section__main .sixth__section__leftSide__btn {
+  padding: 16px 86.5px;
+  background-color: #008a90;
+  border-radius: 8px;
+  max-width: 360px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #eeeeee;
+}
+.sixth__section .sixth__section__main .sixth__section__rightSide {
+  background-color: #393e46;
+  border-radius: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  padding: 48px;
+}
+.sixth__section .sixth__section__main .sixth__section__rightSide .sixth__section__rightSide__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.sixth__section .sixth__section__main .sixth__section__rightSide .sixth__section__rightSide__header {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #eeeeee;
+}
+.sixth__section .sixth__section__main .sixth__section__rightSide .sixth__section__rightSide__content {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #222831;
+}
+.footer .footer__main {
+  padding: 48px 24px;
+}
+.footer .footer__main #footer__logoText {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #eeeeee;
+}
+.footer .footer__center__links a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #eeeeee;
+}
+.footer .footer__center__bottom {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+html * {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,195 @@
+.navbar__main {
+  background-color: $main-bg-color;
+  .navbar__main__logo {
+    @include inter-typography(600, 14px, 22px, $primary-color);
+  }
+  .navbar__main__links {
+    a {
+      @include inter-typography(600, 12px, 20px, $primary-color);
+    }
+  }
+  .navbar__main__btn {
+    a {
+      @include inter-typography(600, 12px, 20px, $primary-color);
+      border-radius: 8px;
+      border: 1px solid $primary-color;
+    }
+  }
+}
+
+.first__section {
+  background-color: $secondary-bg-color;
+  .first__section__main {
+    padding: 90px 0;
+    .first__section__content {
+      h5 {
+        @include inter-typography(700, 67px, 70px, $secondary-color);
+      }
+      p {
+        @include inter-typography(400, 22px, 28px, $secondary-em-color);
+      }
+    }
+    .first__section__btn {
+      a {
+        padding: 16px 80px;
+        background-color: $button-bg;
+        border-radius: 8px;
+        @include inter-typography(600, 18px, 24px, $primary-color);
+      }
+    }
+  }
+}
+
+.second__section {
+  background-color: $main-bg-color;
+  .second__section__main {
+    padding: 144px 0;
+    .second__section__header {
+      @include inter-typography(700, 28px, 34px, $text-darkcyan);
+    }
+    .second__section__content {
+      @include inter-typography(700, 51px, 61px, $primary-color);
+    }
+  }
+}
+
+.third__section {
+  background-color: $third-bg-color;
+  .third__section__main {
+    padding: 80px 0;
+    .third__section__header {
+      @include inter-typography(700, 38px, 44px, $primary-color);
+    }
+    .third__section__content {
+      gap: 40px;
+      .third__section__contentBox {
+        gap: 8px;
+        .third__section__contentBox__header {
+          width: 32px;
+          height: 32px;
+          padding: 18px;
+          background-color: $secondary-bg-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          @include inter-typography(600, 24px, 32px, $secondary-color);
+        }
+        .third__section__contentBox__body {
+          @include inter-typography(600, 18px, 26px, $primary-color);
+        }
+        .third__section__contentBox__footer {
+          @include inter-typography(400, 14px, 22px, $white);
+        }
+      }
+    }
+  }
+}
+
+.fourth__section {
+  background-color: $main-bg-color;
+  .fourth__section__main {
+    padding: 120px 0;
+    .fourth__section__header {
+      gap: 8px;
+      padding-bottom: 40px;
+      .fourth__section__header__main {
+        @include inter-typography(700, 51px, 61px, $primary-color);
+      }
+      .fourth__section__header__child {
+        @include inter-typography(400, 18px, 26px, $white);
+      }
+    }
+    .fourth__section__body {
+      padding: 0;
+      .fourth__section__card {
+        border-radius: 16px;
+        margin-bottom: 24px;
+        img {
+          border-radius: 16px 16px 0 0;
+        }
+        .fourth__section__card__bottom {
+          border-radius: 0 0 16px 16px;
+          background-color: $third-bg-color;
+          padding: 16px;
+          .fourth__section__card__header {
+            @include inter-typography(600, 14px, 21px, $primary-color);
+          }
+          .fourth__section__card__content {
+            @include lineCount(1);
+            @include inter-typography(400, 14px, 21px, $primary-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+.fifth__section {
+  background-color: $main-bg-color;
+  .fifth__section__main {
+    padding: 120px 0;
+    .fifth__section__rightSide__header {
+      @include inter-typography(700, 51px, 61px, $primary-color);
+    }
+    .fifth__section__rightSide__content {
+      @include inter-typography(400, 14px, 22px, $white);
+    }
+  }
+}
+
+.sixth__section {
+  background-color: $main-bg-color;
+  .sixth__section__main {
+    padding: 120px 0;
+    .sixth__section__leftSide__header {
+      @include inter-typography(700, 51px, 61px, $primary-color);
+    }
+    .sixth__section__leftSide__content {
+      @include inter-typography(400, 18px, 26px, $white);
+    }
+    .sixth__section__leftSide__btn {
+      padding: 16px 86.5px;
+      background-color: $button-bg;
+      border-radius: 8px;
+      max-width: 360px;
+      @include inter-typography(600, 18px, 26px, $primary-color);
+    }
+    .sixth__section__rightSide {
+      background-color: $third-bg-color;
+      border-radius: 48px;
+      @include flexBox(column, center, flex-start);
+      padding: 48px;
+      .sixth__section__rightSide__box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .sixth__section__rightSide__header {
+        @include inter-typography(600, 18px, 26px, $primary-color);
+      }
+      .sixth__section__rightSide__content {
+        @include inter-typography(400, 14px, 22px, $white);
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $main-bg-color;
+  .footer__main {
+    padding: 48px 24px;
+    #footer__logoText {
+      @include inter-typography(600, 14px, 21px, $primary-color);
+    }
+  }
+  .footer__center__links {
+    a {
+      @include inter-typography(600, 12px, 20px, $primary-color);
+    }
+  }
+  .footer__center__bottom {
+    @include inter-typography(400, 12px, 20px, $white);
+  }
+}
