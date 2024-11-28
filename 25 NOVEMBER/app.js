@@ -153,3 +153,7 @@ console.log(factResult);
 console.log("\n");
 console.log("0-dan 100-ə qədər təsadüfi bir ədəd generasiya et və çap et.");
 console.log(Math.random() * 101);
+
+if (window.confirm("Do you want to exit?")) {
+  window.close("index.html", "Thanks for visting!");
+}
