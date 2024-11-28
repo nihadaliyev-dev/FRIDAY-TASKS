@@ -124,19 +124,25 @@ function sixthTask() {
 // 7. Bankomat proqramı tərtib edin. 1-düyməsini seçdikdə balans ekranda göstərilsin. 2-düyməsini seçdikdə balansa mədaxil olunsun və balans ekranda göstərilsin,
 // 3-düyməsini seçdikdə balansdan pul çıxarılsın. 4-düyməsini seçdikdə çıxış verilsin.
 function seventhTask() {
-  let option = prompt(
-    "Əməliyyat seçin:\n1-balansı ekranda göstərmək üçün\n2-balansa mədaxil etmək və balansın göstərilməsi\n3-pulun nağdlaşdırılması(pul çıxarışı)\n4-Çıxış"
-  );
-  let balance = 12000;
-  if (option == 1) {
-    console.log(`Kartınızda ${balance} AZN mövcuddur.`);
-  } else if (option == 2) {
-    let balanceIn = prompt("Balansı artırmaq üçün məbləğ daxil edin:");
-    console.log(`Hesabınıza ${balanceIn} AZN mədaxil edildi.`);
-  } else if (option == 3) {
-    let balanceOut = prompt("Balansdan nə qədər məbləğ çıxarmaq istəyirsiniz?");
-    console.log(`Hesabınızdan ${balanceOut} AZN məbləğ çıxarıldı.`);
-  } else if (option == 4) {
-    console.log(`Əməliyyat sona çatdı! Allah bərəkət versin.`);
+  let check = true;
+  while (check) {
+    let option = prompt(
+      "Əməliyyat seçin:\n1-balansı ekranda göstərmək üçün\n2-balansa mədaxil etmək və balansın göstərilməsi\n3-pulun nağdlaşdırılması(pul çıxarışı)\n4-Çıxış"
+    );
+    let balance = 12000;
+    if (option == 1) {
+      console.log(`Kartınızda ${balance} AZN mövcuddur.`);
+    } else if (option == 2) {
+      let balanceIn = prompt("Balansı artırmaq üçün məbləğ daxil edin:");
+      console.log(`Hesabınıza ${balanceIn} AZN mədaxil edildi.`);
+    } else if (option == 3) {
+      let balanceOut = prompt(
+        "Balansdan nə qədər məbləğ çıxarmaq istəyirsiniz?"
+      );
+      console.log(`Hesabınızdan ${balanceOut} AZN məbləğ çıxarıldı.`);
+    } else if (option == 4) {
+      check = false;
+      console.log(`Əməliyyat sona çatdı! Allah bərəkət versin.`);
+    }
   }
 }
