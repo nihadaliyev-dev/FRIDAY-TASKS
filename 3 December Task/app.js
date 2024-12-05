@@ -569,7 +569,7 @@ const getFirst = (array, n = 1) => {
   return arr;
 };
 console.log(getFirst([1, 3, 5, 7]));
-*/
+
 
 // 2. Write a simple JavaScript function to join all elements of the following array into a string.
 
@@ -605,3 +605,107 @@ const convert = (word) => {
 };
 
 console.log(convert("saLamNecesen"));
+
+
+const clear = (array) => {
+  result = [];
+  for (let i = 0; i < array.length; i++) {
+    if (
+      array[i] == 0 ||
+      array[i] == null ||
+      array[i] == undefined ||
+      array[i].length == 0
+    ) {
+      continue;
+    } else {
+      result.push(array[i]);
+    }
+  }
+  return result;
+};
+
+console.log(clear([0, 1, false, 2, undefined, "", 3, null]));
+
+const clearDuplicate = (array) => {
+  let answer = [];
+  for (let i = 0; i < array.length; i++) {
+    if (answer.includes(array[i])) {
+      continue;
+    } else {
+      answer.push(array[i]);
+    }
+  }
+  return answer;
+};
+
+console.log(clearDuplicate(["a", 2, "d", 2, "a", 14, 14, "s", false]));
+
+console.log(lineBreak);
+const isEqual = (array1, array2) => {
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i] || array1.length != array2.length) {
+      return false;
+    }
+  }
+  return true;
+};
+
+if (isEqual([1, 2, 3, 4], [1, 2, 3, 4])) {
+  console.log("Erorr");
+}
+
+const checkChar = (string, char) => {
+  let sum = 0;
+  let haveThisNum = false;
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == char) {
+      haveThisNum = true;
+      sum += i;
+    }
+  }
+  if (haveThisNum != true) return -1;
+  else return sum;
+};
+
+console.log(checkChar("salam", "a"));
+*/
+const addItem = (array, index, string) => {
+  if (index > array.length) {
+    array.push(string);
+    return array;
+  }
+  let newArray = [];
+  let i = 0;
+  while (i < array.length) {
+    if (i != index) {
+      newArray.push(array[i]);
+    } else {
+      newArray.push(string);
+      newArray.push(array[i]);
+    }
+    i++;
+  }
+  return newArray;
+};
+
+console.log(addItem(["a", "salam", "b", "world"], 3, "codeAcademy"));
+
+console.log(lineBreak);
+
+const arrayConcat = (arr1, arr2, char) => {
+  let result = "";
+  for (let i = 0; i < arr1.length; i++) {
+    result += arr1[i] + char;
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    if (i != arr2.length - 1) {
+      result += arr2[i] + char;
+    } else {
+      result += arr2[i];
+    }
+  }
+  return result;
+};
+
+console.log(arrayConcat([1, 2], [3, 4], "**"));
