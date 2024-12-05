@@ -669,7 +669,6 @@ const checkChar = (string, char) => {
 };
 
 console.log(checkChar("salam", "a"));
-*/
 const addItem = (array, index, string) => {
   if (index > array.length) {
     array.push(string);
@@ -709,3 +708,145 @@ const arrayConcat = (arr1, arr2, char) => {
 };
 
 console.log(arrayConcat([1, 2], [3, 4], "**"));
+*/
+console.log(lineBreak);
+
+const arrAverages = (students) => {
+  let resultArr = [];
+  for (let i = 0; i < students.length; i++) {
+    let studentName = students[i].name;
+    let studentAvg = 0;
+    for (let j = 0; j < students[i].scores.length; j++) {
+      studentAvg += students[i].scores[j];
+    }
+    studentAvg /= students[i].scores.length;
+    resultArr.push({ name: studentName, scores: studentAvg });
+  }
+  return resultArr;
+};
+let students_new = [
+  { name: "Ali", scores: [90, 85, 92] },
+  { name: "Davud", scores: [100, 100, 100] },
+  { name: "Mammal", scores: [75, 80, 85] },
+  { name: "Camil", scores: [90, 95, 85] },
+];
+console.log(arrAverages(students_new));
+
+console.log(lineBreak);
+
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JS",
+  "React",
+  "JS",
+  "Redux",
+  "Node",
+  "JS",
+  "MongDB",
+];
+const moreThanFour = (array) => {
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].length > 4) {
+      result.push(array[i]);
+    }
+  }
+  return result;
+};
+
+console.log(moreThanFour(webTechs));
+
+console.log(lineBreak);
+
+const products = [
+  {
+    id: 1,
+    title: "Smartphone",
+    description: "A high-end smartphone with the latest features.",
+    price: 799.99,
+  },
+  {
+    id: 2,
+    title: "Laptop",
+    description: "Powerful laptop with a large screen and fast processor.",
+    price: 1299.99,
+  },
+  {
+    id: 3,
+    title: "Coffee Maker",
+    description: "An automatic coffee maker with a built-in grinder.",
+    price: 99.99,
+  },
+  {
+    id: 4,
+    title: "Headphones",
+    description: "Wireless over-ear headphones with noise-cancellation.",
+    price: 199.99,
+  },
+  {
+    id: 5,
+    title: "Smart TV",
+    description: "55-inch 4K Smart TV with streaming apps built-in.",
+    price: 699.99,
+  },
+];
+
+const avgAndSumOfPrices = (array) => {
+  let sum = 0,
+    avg = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i].price;
+  }
+  avg = sum / array.length;
+  return sum;
+};
+
+console.log(avgAndSumOfPrices(products));
+
+console.log(lineBreak);
+
+let countries = ["Azerbaijan", "Albania", "Germany", "America", "Russian"];
+
+const startsWithA = (array) => {
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].at(0).toLowerCase() == array[i].at(-1).toLowerCase()) {
+      result.push(array[i]);
+    }
+  }
+  return result;
+};
+
+console.log(startsWithA(countries));
+
+console.log(lineBreak);
+
+const findNumberOfDivisors = (n) => {
+  let count = 0;
+
+  for (i = 1; i <= n; i++) {
+    if (n % i == 0) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(findNumberOfDivisors(32));
+
+console.log(lineBreak);
+
+const findSpaceCounts = (str) => {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == " ") {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(findSpaceCounts(" salam necesiniz "));
+
+console.log(lineBreak);
