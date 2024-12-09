@@ -847,6 +847,6 @@ const findSpaceCounts = (str) => {
   return count;
 };
 
-console.log(findSpaceCounts(" salam necesiniz "));
+console.log(findSpaceCounts(" salam necesiniz "));``
 
 console.log(lineBreak);
