@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nihad Aliyev - To Do List</title>
+    <link rel="stylesheet" href="./assets/styles/tailwindcss/output.css" />
+    <link rel="stylesheet" href="./assets/styles/css/app.css" />
+  </head>
+  <body>
+    <div class="deletePopUp__main" style="display: none">
+      <div class="deletePopUp bg-gray-900">
+        <h6>Are you sure to delete all tasks?</h6>
+        <div>
+          <button id="deleteCancel">Cancel</button
+          ><button id="deleteAll">Delete All</button>
+        </div>
+      </div>
+    </div>
+    <div class="main__toDoList bg-gray-900 absolute">
+      <div class="toDoListHeader">
+        <input
+          class="toDoInput"
+          id="addToDoInput"
+          type="text"
+          minlength="1"
+          placeholder="Eat breakfast..."
+        />
+        <button
+          id="addToDoBtn"
+          type="submit"
+          class="addBtn text-white font-serif"
+        >
+          <svg
+            width="18px"
+            height="18px"
+            fill="#fbfbfb"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 45.402 45.402"
+            xml:space="preserve"
+            style="background: none"
+          >
+            <g>
+              <path
+                d="M41.267,18.557H26.832V4.134C26.832,1.851,24.99,0,22.707,0c-2.283,0-4.124,1.851-4.124,4.135v14.432H4.141
+		c-2.283,0-4.139,1.851-4.138,4.135c-0.001,1.141,0.46,2.187,1.207,2.934c0.748,0.749,1.78,1.222,2.92,1.222h14.453V41.27
+		c0,1.142,0.453,2.176,1.201,2.922c0.748,0.748,1.777,1.211,2.919,1.211c2.282,0,4.129-1.851,4.129-4.133V26.857h14.435
+		c2.283,0,4.134-1.867,4.133-4.15C45.399,20.425,43.548,18.557,41.267,18.557z"
+              />
+            </g>
+          </svg>
+        </button>
+        <button id="sortBtn" class="sortBtn">
+          <svg
+            style="background: none"
+            version="1.0"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18.000000pt"
+            height="18.000000pt"
+            viewBox="0 0 512.000000 512.000000"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <g
+              transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+              fill="#fbfbfb"
+              stroke="none"
+            >
+              <path
+                d="M1405 4673 c-47 -24 -86 -64 -106 -108 -18 -38 -19 -106 -19 -1725
+           l0 -1685 -257 257 c-142 141 -274 264 -293 274 -73 38 -188 16 -247 -48 -54
+           -57 -69 -167 -34 -236 24 -46 914 -934 958 -956 44 -22 128 -20 177 4 27 13
+           196 176 497 477 389 391 457 464 467 499 18 63 14 105 -14 163 -45 90 -139
+           133 -239 110 -47 -11 -64 -26 -317 -277 l-268 -266 -2 1690 -3 1689 -22 40
+           c-27 50 -58 80 -105 100 -48 19 -134 19 -173 -2z"
+              />
+              <path
+                d="M3754 4676 c-77 -35 -82 -44 -433 -864 l-334 -780 5 -61 c8 -114 96
+           -196 208 -195 100 1 166 52 210 158 l22 56 408 0 408 0 22 -56 c44 -107 111
+           -157 211 -157 71 0 132 32 174 91 27 39 30 52 30 115 l0 72 -329 765 c-181
+           421 -337 776 -348 790 -41 52 -86 74 -156 77 -42 2 -79 -2 -98 -11z m199 -999
+           c59 -138 107 -255 107 -259 0 -5 -99 -8 -220 -8 -121 0 -220 3 -220 8 0 12
+           215 512 220 512 3 0 53 -114 113 -253z"
+              />
+              <path
+                d="M3241 2335 c-61 -19 -118 -78 -137 -140 -30 -102 13 -202 107 -249
+           l53 -26 348 0 347 0 -414 -580 c-228 -319 -422 -595 -431 -613 -43 -82 -9
+           -203 74 -262 l44 -30 608 0 608 0 44 30 c138 97 118 306 -34 370 -31 12 -94
+           15 -384 15 -279 0 -345 3 -341 13 3 7 192 275 420 594 228 320 418 590 420
+           600 27 94 12 159 -53 223 -32 33 -59 50 -92 58 -72 18 -1128 15 -1187 -3z"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div class="hr"></div>
+      <div class="toDoListBody">
+        <ul id="list" class="toDoTasks">
+          <!-- <li>
+            <div id="editBox" class="editBox">
+              <input id="editInput" type="text" required />
+              <div id="saveChangesBox">
+                <button id="editBtn" type="submit">
+                  <i class="fa-solid fa-check"></i>
+                </button>
+                <button id="discardEditBtn" type="submit">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <p>Doing HomeWork</p>
+            <button id="editButton">
+              <i class="fa-solid fa-pen"></i>
+            </button>
+            <button id="deleteButton">
+              <svg
+                version="1.0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20.000000pt"
+                height="20.000000pt"
+                viewBox="0 0 512.000000 512.000000"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <g
+                  transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                  fill="#fbfbfb"
+                  stroke="none"
+                >
+                  <path
+                    d="M1790 5102 c-19 -9 -45 -32 -57 -51 -22 -32 -23 -43 -23 -227 l0
+               -194 851 0 850 0 -3 199 c-3 223 -7 237 -79 273 -31 17 -89 18 -769 18 -680 0
+               -738 -1 -770 -18z"
+                  />
+                  <path
+                    d="M765 4326 c-27 -7 -64 -20 -81 -28 -49 -27 -115 -99 -143 -158 -24
+               -52 -26 -65 -29 -257 l-4 -203 2051 0 2051 0 0 173 c0 195 -12 262 -61 339
+               -39 60 -121 116 -196 134 -81 19 -3510 19 -3588 0z"
+                  />
+                  <path
+                    d="M850 3358 c-1 -84 213 -3168 222 -3203 14 -54 89 -129 145 -144 30
+               -8 409 -11 1355 -9 l1313 3 43 23 c46 24 97 87 106 130 6 27 236 3156 236
+               3206 l0 26 -1710 0 -1710 0 0 -32z m1272 -456 c14 -8 36 -32 47 -52 21 -38 21
+               -41 21 -1080 0 -1039 0 -1042 -21 -1080 -52 -93 -178 -99 -244 -12 -20 27 -20
+               45 -23 1067 -1 572 0 1054 3 1072 3 18 19 46 36 62 51 51 118 60 181 23z
+               m1027 -1 c14 -9 34 -30 45 -45 21 -27 21 -32 21 -1086 0 -1054 0 -1059 -21
+               -1086 -52 -71 -128 -88 -197 -46 -71 45 -67 -27 -67 1132 0 931 2 1046 16
+               1075 36 76 137 103 203 56z"
+                  />
+                </g>
+              </svg>
+            </button>
+          </li> -->
+        </ul>
+      </div>
+      <div class="hr"></div>
+      <div class="toDoListFooter">
+        <button class="deleteAllBtn" id="deleteAllBtn">Delete All</button>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/5d2a2c8bda.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/scripts/index.js"></script>
+  </body>
+</html>
