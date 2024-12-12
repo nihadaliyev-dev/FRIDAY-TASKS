@@ -45,7 +45,6 @@ addBtn.addEventListener("click", () => {
     }, 800);
     let obj = {};
     obj.title = toDoInput.value;
-    //   obj.id = toDos[toDos.length - 1].id + 1;
     obj.id = toDos.length + 1;
     toDos.push(obj);
 
@@ -147,6 +146,9 @@ function createList(arr) {
     li.appendChild(p);
     li.appendChild(editBtn);
     li.appendChild(button);
+    if (toDo.id === arr.length) {
+      li.classList.add("flyIn");
+    }
     list.appendChild(li);
   });
 }
