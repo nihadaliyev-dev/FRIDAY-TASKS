@@ -1,7 +1,40 @@
+body {
+  background: linear-gradient(
+    90deg,
+    #fbfbfb,
+    rgba(140, 240, 255, 0.479),
+    #fbfbfb
+  );
+}
 .counterDiv {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 12px #21212175;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  gap: 8px;
 }
-
+.count {
+  width: 100px;
+}
+.increment,
+.decrement,
+.reset,
+.count {
+  font-size: 24px;
+  background-color: transparent;
+  border: 2px solid #212121;
+  color: #212121;
+  border-radius: 6px;
+  padding: 0px 8px;
+  transition: all ease-in-out 400ms;
+}
+.increment:hover,
+.decrement:hover,
+.reset:hover {
+  background-color: #212121;
+  color: #fbfbfb;
+}

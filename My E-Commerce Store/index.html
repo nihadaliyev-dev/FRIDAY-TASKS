@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nihad Aliyev - E-commerce</title>
+    <link rel="stylesheet" href="./assets/styles/css/app.css" />
+    <link rel="stylesheet" href="./assets/styles/tailwindcss/output.css" />
+  </head>
+  <body>
+    <header></header>
+
+    <nav class="flex justify-center shadow-lg">
+      <div class="flex items-center justify-between p-6 container navbar__main">
+        <div class="navbar__logo__main">
+          <a class="p-2 text-2xl font-bold" href="#">NShop</a>
+        </div>
+        <div class="navbar__links__main">
+          <ul class="flex items-center gap-2 navbar__links">
+            <li class="navbar__link__li">
+              <a class="navbar__link" href="#">Home</a>
+            </li>
+            <li class="navbar__link__li">
+              <a class="navbar__link" href="#">Category</a>
+            </li>
+            <li class="navbar__link__li">
+              <a class="navbar__link" href="#">About</a>
+            </li>
+            <li class="navbar__link__li">
+              <a class="navbar__link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex items-center flex-col justify-center">
+      <section
+        class="flex flex-col items-center justify-center py-10 w-full container products__main"
+      >
+        <h2 class="self-start text-3xl font-bold pb-6 pl-4">Products</h2>
+
+        <div
+          class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 xl:gap-x-8 products container"
+        >
+          <a
+            href="#"
+            class="overflow-hidden bg-white relative group hover:shadow-xl p-3 pb-11 rounded-xl transition duration-300"
+          >
+            <button class="hover:text-red-500 absolute right-6 top-6 z-20 p-2">
+              <i
+                class="fa-regular fa-heart text-xl transition-all duration-200"
+              >
+              </i>
+            </button>
+            <img
+              src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-02.jpg"
+              alt=""
+              class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8] duration-300"
+            />
+            <h3 class="mt-2 text-lg text-gray-900 line-clamp-1">
+              Nomad Tumbler
+            </h3>
+            <p class="mt-1 text-sm text-gray-700 line-clamp-2">
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Ut, facere.
+            </p>
+            <div class="mt-2 flex justify-between items-center">
+              <p class="text-xl font-semibold text-gray-900">$128</p>
+              <button>Quantity</button>
+            </div>
+            <button
+              class="absolute opacity-0 group-hover:bottom-0 group-hover:opacity-100 duration-300 bottom-10 left-0 rounded-b-md bg-black w-full px-3 py-1.5 text-white"
+            >
+              Add to Cart
+            </button>
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="flex flex-col items-center justify-center py-10 w-full container basket__main"
+      >
+        <h2 class="self-start text-3xl font-bold pb-6 pl-4">Cart</h2>
+
+        <div class="flex gap-5">
+          <div class="self-start grid products container basket">
+            <a
+              href="#"
+              class="flex relative group hover:shadow-xl p-3 rounded-xl transition-all duration-300"
+            >
+              <button class="hover:text-red-500 absolute left-4 top-4 z-20 p-2">
+                <i
+                  class="fa-regular fa-heart text-xl transition-all duration-200"
+                >
+                </i>
+              </button>
+              <img
+                src="https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-02.jpg"
+                alt=""
+                class="aspect-square w-2/12 rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8] duration-300"
+              />
+              <div class="flex flex-col justify-between p-3">
+                <div>
+                  <h3 class="mt-2 text-lg text-gray-900 line-clamp-1">
+                    Nomad Tumbler
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-700 line-clamp-4">
+                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Ut, facere.
+                  </p>
+                </div>
+
+                <div class="mt-2 flex justify-between items-center">
+                  <p class="text-xl font-semibold text-gray-900">$128</p>
+                  <button>Quantity</button>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="self-start w-1/3 relative group shadow-xl p-5 rounded-xl transition duration-300 checkout"
+          >
+            <h2 class="self-start text-xl font-bold pb-6 pl-2">
+              Order Summary
+            </h2>
+            <div class="flex flex-col gap-3">
+              <div class="flex justify-between">
+                <p class="text-gray-600 font-normal">Subtotal</p>
+                <p class="text-black font-bold">$555</p>
+              </div>
+              <div class="flex justify-between">
+                <p class="text-gray-600 font-normal">Delivery Fee</p>
+                <p class="text-black font-bold">$15</p>
+              </div>
+              <div class="w-full h-px bg-gray-400"></div>
+              <div class="flex justify-between">
+                <p class="text-gray-600 font-normal">Total</p>
+                <p class="text-black font-bold">$570</p>
+              </div>
+              <div class="flex bg-gray-200 rounded-3xl px-4 py-3 gap-1">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.0766 12.4857L13.7653 3.17444C13.5917 2.9997 13.3851 2.86115 13.1576 2.76685C12.93 2.67254 12.686 2.62435 12.4397 2.62507H3.75001C3.45164 2.62507 3.16549 2.7436 2.95451 2.95457C2.74353 3.16555 2.62501 3.4517 2.62501 3.75007V12.4398C2.62429 12.6861 2.67248 12.9301 2.76679 13.1576C2.86109 13.3852 2.99963 13.5918 3.17438 13.7654L12.4856 23.0766C12.8372 23.4281 13.3141 23.6256 13.8113 23.6256C14.3084 23.6256 14.7853 23.4281 15.1369 23.0766L23.0766 15.1369C23.4281 14.7853 23.6255 14.3085 23.6255 13.8113C23.6255 13.3141 23.4281 12.8373 23.0766 12.4857ZM13.8113 21.2204L4.87501 12.2813V4.87507H12.2813L21.2175 13.8113L13.8113 21.2204ZM9.37501 7.87507C9.37501 8.17174 9.28703 8.46175 9.12221 8.70842C8.95739 8.9551 8.72312 9.14736 8.44903 9.26089C8.17494 9.37442 7.87334 9.40412 7.58237 9.34625C7.2914 9.28837 7.02413 9.14551 6.81435 8.93573C6.60457 8.72595 6.46171 8.45868 6.40383 8.1677C6.34595 7.87673 6.37566 7.57513 6.48919 7.30104C6.60272 7.02695 6.79498 6.79269 7.04165 6.62786C7.28833 6.46304 7.57834 6.37507 7.87501 6.37507C8.27283 6.37507 8.65436 6.5331 8.93567 6.81441C9.21697 7.09571 9.37501 7.47724 9.37501 7.87507Z"
+                    fill="black"
+                    fill-opacity="0.4"
+                  ></path>
+                </svg>
+                <input
+                  class="w-full outline-none bg-transparent px-2"
+                  type="text"
+                  placeholder="Add promo code"
+                />
+              </div>
+              <button
+                class="flex items-center justify-center gap-2 bg-black rounded-3xl p-3 text-white"
+              >
+                <p>Go To Checkout</p>
+                <svg
+                  width="19"
+                  height="16"
+                  viewBox="0 0 19 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.7959 0.454104L18.5459 7.2041C18.6508 7.30862 18.734 7.43281 18.7908 7.56956C18.8476 7.7063 18.8768 7.85291 18.8768 8.00098C18.8768 8.14904 18.8476 8.29565 18.7908 8.4324C18.734 8.56915 18.6508 8.69334 18.5459 8.79785L11.7959 15.5479C11.5846 15.7592 11.2979 15.8779 10.9991 15.8779C10.7002 15.8779 10.4135 15.7592 10.2022 15.5479C9.99084 15.3365 9.87211 15.0499 9.87211 14.751C9.87211 14.4521 9.99084 14.1654 10.2022 13.9541L15.0313 9.12504L1.25 9.12504C0.951632 9.12504 0.665483 9.00651 0.454505 8.79554C0.243527 8.58456 0.125 8.29841 0.125 8.00004C0.125 7.70167 0.243527 7.41552 0.454505 7.20455C0.665483 6.99357 0.951632 6.87504 1.25 6.87504L15.0313 6.87504L10.2013 2.04598C9.98991 1.83463 9.87117 1.54799 9.87117 1.2491C9.87117 0.950218 9.98991 0.663574 10.2013 0.45223C10.4126 0.240885 10.6992 0.122151 10.9981 0.122151C11.297 0.122151 11.5837 0.240885 11.795 0.45223L11.7959 0.454104Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="flex flex-col items-center justify-center py-10 w-full container favorites__main"
+      >
+        <h2 class="self-start text-3xl font-bold pb-6 pl-4">Favorites</h2>
+
+        <div
+          class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 xl:gap-x-8 products container favorites"
+        ></div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script
+      src="https://kit.fontawesome.com/5d2a2c8bda.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/scripts//index.js"></script>
+    <script src="./assets/scripts/app.js"></script>
+  </body>
+</html>
