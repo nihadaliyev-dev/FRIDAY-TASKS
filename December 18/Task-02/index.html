@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./assets/scripts/app.js" defer></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 50px auto;
+        text-align: center;
+        background-color: #f0f0f0;
+      }
+
+      h2 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #666;
+        margin: 10px 0;
+      }
+
+      div {
+        margin: 20px 0;
+      }
+
+      input.guess {
+        padding: 8px;
+        width: 100px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 8px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      .guessBtn {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .guessBtn:hover {
+        background-color: #45a049;
+      }
+
+      .resetBtn {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .resetBtn:hover {
+        background-color: #da190b;
+      }
+
+      .response {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .attempts {
+        color: #666;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Guess the Number!</h2>
+    <p>Try to guess the number between 1 and 100.</p>
+    <div>
+      <input type="number" class="guess" />
+      <button class="guessBtn">Guess</button>
+      <button class="resetBtn">Reset</button>
+    </div>
+    <div>
+      <p class="response">Enter your guess!</p>
+      <p class="attempts">Attempts: 0</p>
+    </div>
+  </body>
+</html>
