@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nihad Aliyev - Task 19 December</title>
+    <link rel="stylesheet" href="./assets/styles/tailwindcss/output.css" />
+  </head>
+  <body class="flex flex-col items-center">
+    <div class="container">
+      <div class="panel__header__main">
+        <h2 class="text-3xl p-4 font-bold text-center">
+          Products Table by Nihad Aliyev
+        </h2>
+      </div>
+      <div class="panel__filters__main">
+        <div class="flex items-center justify-between panel__filters">
+          <div class="flex items-center relative searchBox">
+            <input
+              id="search"
+              type="text"
+              class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-base border border-slate-200 rounded-md pl-3 pr-10 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+              placeholder="Enter your text"
+            />
+            <button
+              class="absolute right-1 top-1.5 rounded bg-slate-800 p-1.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              type="button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="flex gap-2 filter__and__sortBox">
+            <div class="sortBox">
+              <select
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                name="sort"
+                id="sort"
+              >
+                <option value="default" selected>Default</option>
+                <option value="AtoZ">Sort by A-Z</option>
+                <option value="ZtoA">Sort by Z-A</option>
+                <option value="ascPrice">Sort by Price Ascending</option>
+                <option value="descPrice">Sort by Price Descending</option>
+              </select>
+            </div>
+            <div class="filterBox">
+              <select
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                name="category"
+                id="category"
+              ></select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 panel__table__main">
+        <table class="w-full table-auto">
+          <thead>
+            <tr>
+              <th class="p-3 pl-5 text-left">Photo</th>
+              <th class="p-3 text-left">ID</th>
+              <th class="p-3 text-left">Title</th>
+              <th class="p-3 text-left">Category</th>
+              <th class="p-3 text-left">Description</th>
+              <th class="p-3 text-left">Price</th>
+            </tr>
+          </thead>
+          <tbody class="rounded-lg table__body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./assets/scripts/index.js" type="module" defer></script>
+  </body>
+</html>
