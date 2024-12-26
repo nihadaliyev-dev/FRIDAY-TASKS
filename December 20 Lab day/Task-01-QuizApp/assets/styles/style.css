@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  padding: 24px;
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+}
+.question {
+  margin: 24px 0;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px #21212121;
+  padding: 26px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  }
+}
+.wrapper {
+  position: relative;
+  padding: 24px;
+}
+button {
+  background-color: rgb(64, 64, 255);
+  display: flex;
+  padding: 12px 0;
+  border-radius: 12px;
+  border: none;
+  color: #fbfbfb;
+  width: 100%;
+  transition: all ease 300ms;
+  justify-content: center;
+}
+button:hover {
+  background-color: rgb(20, 20, 255);
+}
