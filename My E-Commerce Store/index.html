@@ -6,6 +6,8 @@
     <title>Nihad Aliyev - E-commerce</title>
     <link rel="stylesheet" href="./assets/styles/css/app.css" />
     <link rel="stylesheet" href="./assets/styles/tailwindcss/output.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header></header>
@@ -29,6 +31,11 @@
             <li class="navbar__link__li">
               <a class="navbar__link" href="#">Contact Us</a>
             </li>
+            <li class="navbar__link__li">
+              <a class="navbar__link" href="./pages/favorites.html"
+                >Favorites</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -43,11 +50,14 @@
         <div
           class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 xl:gap-x-8 products container"
         >
-          <a
+          <!-- <a
             href="#"
             class="overflow-hidden bg-white relative group hover:shadow-xl p-3 pb-11 rounded-xl transition duration-300"
           >
-            <button class="hover:text-red-500 absolute right-6 top-6 z-20 p-2">
+            <button
+              id="addToFavoritesBtn"
+              class="hover:text-red-500 absolute right-6 top-6 z-20 p-2"
+            >
               <i
                 class="fa-regular fa-heart text-xl transition-all duration-200"
               >
@@ -74,7 +84,7 @@
             >
               Add to Cart
             </button>
-          </a>
+          </a> -->
         </div>
       </section>
 
@@ -198,7 +208,9 @@
       src="https://kit.fontawesome.com/5d2a2c8bda.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/scripts//index.js"></script>
+    <script src="./assets/scripts/data.js" type="module" defer></script>
+
+    <script src="./assets/scripts/index.js" type="module"></script>
     <script src="./assets/scripts/app.js"></script>
   </body>
 </html>
