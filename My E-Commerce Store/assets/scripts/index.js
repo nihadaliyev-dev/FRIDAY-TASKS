@@ -2,6 +2,9 @@ import { products } from "./data.js";
 
 const productsMain = document.querySelector(".products");
 
+const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+console.log(cartProducts);
+
 const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 // const createCards = () => {
@@ -143,7 +146,7 @@ function createCards() {
 
     const productImg = document.createElement("img");
     productImg.className =
-      "aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8] duration-300";
+      "aspect-square w-full rounded-lg p-6 object-contain hover:p-4 group-hover:opacity-75 xl:aspect-[7/8] duration-300";
     productImg.alt = "";
     productImg.src = product.image;
 
@@ -166,9 +169,32 @@ function createCards() {
     // quantity.className = "bg-gray-200 rounded-lg px-3 py-1.5 text-gray-700";
 
     const addToCartBtn = document.createElement("button");
-    addToCartBtn.className =
-      "absolute opacity-0 group-hover:bottom-0 group-hover:opacity-100 duration-300 bottom-10 left-0 rounded-b-md bg-black w-full px-3 py-1.5 text-white";
-    addToCartBtn.textContent = "Add to Cart";
+
+    if (cartProducts.includes(product)) {
+      console.log("includes");
+      addToCartBtn.className =
+        "absolute opacity-0 group-hover:bottom-0 group-hover:opacity-100 duration-300 bottom-10 left-0 rounded-b-md bg-black w-full px-3 py-1.5 text-white btnAdded";
+      addToCartBtn.textContent = "Already in Cart";
+    } else {
+      addToCartBtn.className =
+        "absolute opacity-0 group-hover:bottom-0 group-hover:opacity-100 duration-300 bottom-10 left-0 rounded-b-md bg-black w-full px-3 py-1.5 text-white";
+      addToCartBtn.textContent = "Add to Cart";
+    }
+
+    addToCartBtn.addEventListener("click", () => {
+      addToCartBtn.classList.add("btnAdded");
+      addToCartBtn.textContent = "Already in Cart";
+
+      // const index = cartProducts.findIndex((cart) => cart.id == product.id);
+      if (cartProducts.includes(product)) {
+        console.log("This is in cart");
+      } else {
+        cartProducts.push(product);
+        localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+        console.log("This isn't in cart");
+      }
+      console.log(cartProducts);
+    });
 
     card.appendChild(addFavoritesBtn);
     card.appendChild(productImg);

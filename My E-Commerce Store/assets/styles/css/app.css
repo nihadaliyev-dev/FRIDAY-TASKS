@@ -28,6 +28,10 @@
   color: #212121;
 }
 
+.btnAdded {
+  background: rgb(154, 33, 0) !important;
+}
+
 html * {
   font-family: "Roboto", sans-serif;
 }
