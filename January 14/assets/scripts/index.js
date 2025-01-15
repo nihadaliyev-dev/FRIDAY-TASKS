@@ -5,14 +5,21 @@ const searchBtn = document.querySelector("#submitBtn");
 const output = document.querySelector("#output");
 searchBtn.addEventListener("click", (e) => {
   let data = getData(textInput.value);
-  console.log(data);
 });
 
-function getData(search) {
+async function getData(search) {
   axios
     .get(`${BASE_URL}/${search}`)
     .then((response) => {
       console.log(response.data);
+      let dataToString = JSON.stringify(response.data);
+      for (let dataLetter in dataToString) {
+        if (dataToString[dataLetter] == ",") {
+          output.innerHTML += "<br>&emsp;";
+        } else {
+          output.innerHTML += dataToString[dataLetter];
+        }
+      }
       return response.data;
     })
     .catch((err) => {
