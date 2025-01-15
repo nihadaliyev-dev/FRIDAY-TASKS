@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,10 +11,10 @@
     <script src="./assets/scripts/main.js" type="module" defer></script>
     <script src="./assets/scripts/index.js" type="module" defer></script>
   </head>
-  <body class="bg-white">
+  <body class="bg-white dark:bg-gray-900 dark:text-white">
     <main class="flex flex-col items-center justify-center">
       <div
-        class="w-full shadow-lg px-20 flex justify-between py-3 main__header"
+        class="w-full shadow-lg dark:shadow-[#fbfbfb20] px-20 flex justify-between py-3 main__header"
       >
         <div class="main__header__legend">Where in the world!</div>
         <div class="main__header__theme">
@@ -25,12 +25,16 @@
         <div class="py-6 main__body">
           <div class="flex justify-between py-6 main__body__header">
             <input
-              class="p-3 shadow-lg rounded-md w-1/4"
+              class="p-3 shadow-lg rounded-md w-5/12 dark:bg-gray-900 dark:text-white dark:shadow-[#fbfbfb10]"
               id="searchInput"
               type="text"
               placeholder="Search for a country and Press Enter"
             />
-            <select class="p-3" name="" id="filterRegion">
+            <select
+              class="p-3 bg-white dark:bg-gray-900 dark:text-white shadow-lg dark:shadow-[#fbfbfb10]"
+              name=""
+              id="filterRegion"
+            >
               <option class="p-3" value="all" selected default>All</option>
               <option value="africa">Africa</option>
               <option value="americas">Americas</option>
@@ -39,7 +43,9 @@
               <option value="oceania">Oceania</option>
             </select>
           </div>
-          <div class="grid grid-cols-4 gap-6 main__body__body cardWrapper">
+          <div
+            class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 main__body__body cardWrapper"
+          >
             <!-- <div class="main__card">
               <div class="card__flag">
                 <img src="" alt="" />
