@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nihad Aliyev Task - January 15</title>
+    <link rel="stylesheet" href="./assets/styles/tailwindcss/output.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <script src="./assets/scripts/details.js" type="module" defer></script>
+    <!-- <script src="./assets/scripts/constants.js" type="module" defer></script>
+    <script src="./assets/scripts/main.js" type="module" defer></script>
+    <script src="./assets/scripts/index.js" type="module" defer></script>
+  </head> -->
+    <body class="bg-white dark:bg-gray-900 dark:text-white">
+      <main class="flex flex-col items-center justify-center">
+        <div
+          class="w-full shadow-lg dark:shadow-[#fbfbfb20] px-20 flex justify-between py-3 main__header"
+        >
+          <div class="main__header__legend">Where in the world!</div>
+          <div class="main__header__theme">
+            <button class="theme__toggle">Dark Mode</button>
+          </div>
+        </div>
+        <div class="container">
+          <div class="relative h-dvh py-6 main__body">
+            <div class="goBackBtnMain">
+              <button class="px-3 py-2 bg-blue-900 goBackBtn">Go Back</button>
+            </div>
+            <div
+              class="flex justify-center items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full gap-10 details__main py-6"
+            >
+              <div class="w-1/2 details__main__left">
+                <img class="w-full" id="details__flag" src="" alt="" />
+              </div>
+              <div class="flex flex-col gap-[24px] details__main__right">
+                <div class="text-4xl font-bold details__country__name"></div>
+                <div
+                  class="flex justify-between gap-6 details__country__details"
+                >
+                  <div class="flex flex-col gap-[12px]">
+                    <p class="font-semibold">
+                      Native Name: <span id="nativeName"></span>
+                    </p>
+                    <p class="font-semibold">
+                      Population: <span id="population"></span>
+                    </p>
+                    <p class="font-semibold">
+                      Region: <span id="region"></span>
+                    </p>
+                    <p class="font-semibold">
+                      Sub Region: <span id="subRegion"></span>
+                    </p>
+                    <p class="font-semibold">
+                      Capital: <span id="capital"></span>
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-[12px]">
+                    <p class="font-semibold">
+                      Top Level Domain: <span id="domain"></span>
+                    </p>
+                    <p class="font-semibold">
+                      Currencies: <span id="currencies"></span>
+                    </p>
+                    <p class="font-semibold">
+                      Languages: <span id="languages"></span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-[16px] details__country__borderCountries"
+                >
+                  Border countries:
+                </div>
+              </div>
+            </div>
+            <div
+              class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 main__body__body cardWrapper"
+            >
+              <!-- <div class="main__card">
+              <div class="card__flag">
+                <img src="" alt="" />
+              </div>
+              <div class="p-4 card__content">
+                <div class="card__content__header">Example Header</div>
+                <div class="card__content__body">Example content</div>
+              </div>
+            </div> -->
+            </div>
+          </div>
+          <div class="main__footer"></div>
+        </div>
+      </main>
+
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </body>
+  </head>
+</html>

@@ -44,6 +44,10 @@ export function createCards(arr) {
 
         card.append(cardFlagDiv, cardContentMain);
         wrapper.append(card);
+
+        card.addEventListener("click", (e) => {
+          window.location.href = `./details.html?country=${country.name.common}`;
+        });
       }
     });
   } else {
