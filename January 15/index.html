@@ -4,9 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nihad Aliyev Task - January 15</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="./assets/styles/tailwindcss/output.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
 
-    
+    <script src="./assets/scripts/constants.js" type="module" defer></script>
+    <script src="./assets/scripts/main.js" type="module" defer></script>
+    <script src="./assets/scripts/index.js" type="module" defer></script>
+  </head>
+  <body class="bg-white">
+    <main class="flex flex-col items-center justify-center">
+      <div
+        class="w-full shadow-lg px-20 flex justify-between py-3 main__header"
+      >
+        <div class="main__header__legend">Where in the world!</div>
+        <div class="main__header__theme">
+          <button class="theme__toggle">Dark Mode</button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="py-6 main__body">
+          <div class="flex justify-between py-6 main__body__header">
+            <input
+              class="p-3 shadow-lg rounded-md w-1/4"
+              id="searchInput"
+              type="text"
+              placeholder="Search for a country and Press Enter"
+            />
+            <select class="p-3" name="" id="filterRegion">
+              <option class="p-3" value="all" selected default>All</option>
+              <option value="africa">Africa</option>
+              <option value="americas">Americas</option>
+              <option value="asia">Asia</option>
+              <option value="europe">Europe</option>
+              <option value="oceania">Oceania</option>
+            </select>
+          </div>
+          <div class="grid grid-cols-4 gap-6 main__body__body cardWrapper">
+            <!-- <div class="main__card">
+              <div class="card__flag">
+                <img src="" alt="" />
+              </div>
+              <div class="p-4 card__content">
+                <div class="card__content__header">Example Header</div>
+                <div class="card__content__body">Example content</div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="main__footer"></div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>
