@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Jokes by Type</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Joke Filter</h1>
+      <label for="jokeType">Choose a joke type:</label>
+      <select id="jokeType">
+        <option value="disable">Select a type</option>
+      </select>
+      <button id="generateButton" disabled>Generate Joke</button>
+      <div id="jokeContainer">
+        <p id="setup"></p>
+        <p id="punchline"></p>
+      </div>
+    </div>
+
+    <script src="./assets/scripts/app.js"></script>
+  </body>
+</html>
