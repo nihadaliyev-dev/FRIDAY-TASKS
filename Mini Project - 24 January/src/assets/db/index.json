@@ -1,0 +1,226 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "name": "Tech Conference 2024",
+      "dateTime": "2024-12-15T09:00:00Z",
+      "venueName": "Tech Park Conference Hall",
+      "venueAddress": "123 Silicon Avenue, Baku, Azerbaijan",
+      "venueCapacity": 500,
+      "organizer": "Tech Innovators",
+      "description": "An annual conference for tech enthusiasts to explore the latest trends in AI, IoT, and software development.",
+      "ticketsAvailable": 200,
+      "category": "Technology",
+      "price": 100,
+      "ageRestriction": "18+",
+      "posterURL": "https://example.com/posters/tech-conference-2024.jpg",
+      "duration": "8 hours",
+      "soldTickets": 300
+    },
+    {
+      "id": "2",
+      "name": "Live Music Night",
+      "dateTime": "2024-12-20T19:30:00Z",
+      "venueName": "City Music Arena",
+      "venueAddress": "456 Harmony Street, Ganja, Azerbaijan",
+      "venueCapacity": 1000,
+      "organizer": "Music Fest Co.",
+      "description": "A night to enjoy live performances from renowned artists and local bands.",
+      "ticketsAvailable": 50,
+      "category": "Music",
+      "price": 50,
+      "ageRestriction": "16+",
+      "posterURL": "https://example.com/posters/live-music-night.jpg",
+      "duration": "4 hours",
+      "soldTickets": 600
+    },
+    {
+      "id": "3",
+      "name": "Startup Pitch Day 2024",
+      "dateTime": "2024-11-30T10:00:00Z",
+      "venueName": "Startup Hub Auditorium",
+      "venueAddress": "789 Innovation Drive, Baku, Azerbaijan",
+      "venueCapacity": 300,
+      "organizer": "Startup Incubator",
+      "description": "Pitch your ideas to investors and gain mentorship from industry leaders.",
+      "ticketsAvailable": 150,
+      "category": "Business",
+      "price": 30,
+      "ageRestriction": "All Ages",
+      "posterURL": "https://example.com/posters/startup-pitch-day.jpg",
+      "duration": "6 hours",
+      "soldTickets": 100
+    },
+    {
+      "id": "4",
+      "name": "Art Exhibition 2024",
+      "dateTime": "2024-12-01T15:00:00Z",
+      "venueName": "Modern Art Gallery",
+      "venueAddress": "321 Creative Lane, Baku, Azerbaijan",
+      "venueCapacity": 200,
+      "organizer": "Artistic Minds",
+      "description": "Explore the finest contemporary art from local and international artists.",
+      "ticketsAvailable": 80,
+      "category": "Art",
+      "price": 20,
+      "ageRestriction": "All Ages",
+      "posterURL": "https://example.com/posters/art-exhibition-2024.jpg",
+      "duration": "5 hours",
+      "soldTickets": 70
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "role": "admin",
+      "username": "admin_tech",
+      "email": "admin_tech@example.com",
+      "password": "hashed_password_1",
+      "balance": 500,
+      "profilePictureURL": "https://example.com/images/admin-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 1
+        },
+        {
+          "id": 2,
+          "eventId": 2
+        }
+      ],
+      "accountCreationDate": "2022-01-01",
+      "totalSpentMoney": 0
+    },
+    {
+      "id": 2,
+      "role": "client",
+      "username": "johnny_events",
+      "email": "johnny@example.com",
+      "password": "hashed_password_2",
+      "balance": 150,
+      "profilePictureURL": "https://example.com/images/johnny-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 3
+        },
+        {
+          "id": 2,
+          "eventId": 4
+        }
+      ],
+      "accountCreationDate": "2023-05-15",
+      "totalSpentMoney": 80
+    },
+    {
+      "id": 3,
+      "role": "client",
+      "username": "mike_attendee",
+      "email": "mike@example.com",
+      "password": "hashed_password_3",
+      "balance": 75,
+      "profilePictureURL": "https://example.com/images/mike-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 1
+        },
+        {
+          "id": 2,
+          "eventId": 2
+        }
+      ],
+      "accountCreationDate": "2023-07-12",
+      "totalSpentMoney": 50
+    },
+    {
+      "id": 4,
+      "role": "client",
+      "username": "jenny_tech",
+      "email": "jenny@example.com",
+      "password": "hashed_password_4",
+      "balance": 120,
+      "profilePictureURL": "https://example.com/images/jenny-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 3
+        },
+        {
+          "id": 2,
+          "eventId": 5
+        }
+      ],
+      "accountCreationDate": "2022-03-01",
+      "totalSpentMoney": 110
+    },
+    {
+      "id": 5,
+      "role": "client",
+      "username": "susan_smith",
+      "email": "susan@example.com",
+      "password": "hashed_password_5",
+      "balance": 200,
+      "profilePictureURL": "https://example.com/images/susan-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 4
+        },
+        {
+          "id": 2,
+          "eventId": 5
+        }
+      ],
+      "accountCreationDate": "2021-09-20",
+      "totalSpentMoney": 250
+    }
+  ],
+  "tickets": [
+    {
+      "id": 1,
+      "userId": 2,
+      "eventId": 1,
+      "quantity": 2,
+      "price": 100,
+      "purchaseDate": "2024-11-10T15:30:00Z",
+      "ticketCode": "TK-001-AB12X"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "eventId": 2,
+      "quantity": 1,
+      "price": 80,
+      "purchaseDate": "2024-11-12T10:00:00Z",
+      "ticketCode": "TK-002-CD34Y"
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "eventId": 3,
+      "quantity": 3,
+      "price": 120,
+      "purchaseDate": "2024-11-14T12:00:00Z",
+      "ticketCode": "TK-003-EF56Z"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "eventId": 4,
+      "quantity": 1,
+      "price": 90,
+      "purchaseDate": "2024-11-15T18:30:00Z",
+      "ticketCode": "TK-004-GH78A"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "eventId": 5,
+      "quantity": 2,
+      "price": 130,
+      "purchaseDate": "2024-11-16T09:00:00Z",
+      "ticketCode": "TK-005-IJ90B"
+    }
+  ]
+}
