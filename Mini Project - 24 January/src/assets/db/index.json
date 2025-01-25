@@ -13,7 +13,7 @@
       "category": "Technology",
       "price": 100,
       "ageRestriction": "18+",
-      "posterURL": "https://example.com/posters/tech-conference-2024.jpg",
+      "posterURL": "../images/banner_1.png",
       "duration": "8 hours",
       "soldTickets": 300
     },
@@ -30,7 +30,7 @@
       "category": "Music",
       "price": 50,
       "ageRestriction": "16+",
-      "posterURL": "https://example.com/posters/live-music-night.jpg",
+      "posterURL": "../images/banner_1.png",
       "duration": "4 hours",
       "soldTickets": 600
     },
