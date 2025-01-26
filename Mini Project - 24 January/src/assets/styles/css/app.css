@@ -32,6 +32,15 @@
   color: #646464;
 }
 
+.eventCard {
+  transition: all ease-in 300ms;
+  cursor: pointer;
+}
+
+.eventCard:hover {
+  box-shadow: 0px 0px 12px #ffdd00;
+}
+
 .signinupBox {
   padding: 32px 28px;
   max-width: 440px;
@@ -66,7 +75,7 @@
 }
 
 .modal__header {
-  padding: 24px 0;
+  padding: 0 0 24px 0;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
@@ -80,8 +89,13 @@
   text-align: center;
 }
 
+#registerCloseBtn {
+  padding: 20px;
+}
+
 .footer {
   position: absolute;
+  margin-top: 120px;
   z-index: 49;
 }
 .footer .footer__main {
@@ -182,6 +196,64 @@
   top: 0;
   transform: translateX(-50%) rotate(-33deg);
   width: 200vw;
+}
+
+.admin__sideBar__button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #101218;
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.1450980392);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all ease-in 250ms;
+}
+
+.admin__sideBar__button:hover {
+  box-shadow: 0px 0px 10px #ffdc00;
+}
+
+.admin__sideBar {
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2078431373);
+  animation: idle 10s ease-in-out infinite;
+}
+
+@keyframes idle {
+  0% {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2078431373);
+  }
+  25% {
+    box-shadow: 0px -100px 20px rgba(255, 255, 255, 0.2078431373);
+  }
+  50% {
+    box-shadow: 0px 0px 20px #ffdc00;
+  }
+  75% {
+    box-shadow: 0px 100px 20px rgba(255, 255, 255, 0.2078431373);
+  }
+  100% {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2078431373);
+  }
+}
+.home__eventPrice {
+  padding: 12px 20px;
+  border-radius: 40px;
+}
+
+.eventContent {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eventsHeader {
+  padding: 24px 0;
 }
 
 html * {
