@@ -1,0 +1,17 @@
+.admin__content {
+  box-shadow: 0px 0px 20px #fbfbfb50;
+  scrollbar-width: 4px;
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #212121;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ffdc00;
+    border-radius: 4px;
+    box-shadow: 0px 0px 12px #ffdc00;
+  }
+}

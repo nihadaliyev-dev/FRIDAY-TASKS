@@ -24,7 +24,7 @@
   </head>
   <body>
     <div
-      class="hidden w-full h-full flex items-center justify-center signinup__modal bg-[#00000099] fixed z-50"
+      class="w-full h-full flex items-center justify-center signinup__modal bg-[#00000099] fixed z-50"
     >
       <div class="rounded-[0.75rem] relative p-3 signinupBox bg-white">
         <button class="absolute top-0 right-0" id="registerCloseBtn">
@@ -41,25 +41,65 @@
         </button>
         <span></span>
         <div class="modal__header">Login</div>
-        <form class="flex flex-col gap-[12px] loginForm" action="">
+        <form class="flex flex-col gap-[12px]" id="loginForm" action="">
           <div>
-            <input type="email" placeholder="Email" autocomplete="email" />
+            <input class="hidden" type="text" placeholder="Name" id="name" />
+          </div>
+          <div>
+            <input
+              class="hidden"
+              type="text"
+              placeholder="Surname"
+              id="surname"
+              autocomplete="family-name"
+            />
+          </div>
+          <div>
+            <input
+              class="hidden"
+              type="text"
+              placeholder="Mobile"
+              id="phone"
+              autocomplete="mobile"
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              placeholder="Email"
+              autocomplete="email"
+              id="email"
+            />
           </div>
           <div class="relative">
             <input
               type="password"
               placeholder="Password"
               autocomplete="current-password"
+              id="password"
             /><a
-              class="absolute right-[1.25rem] top-1/2 -translate-y-1/2"
+              class="absolute cursor-pointer right-[1.25rem] top-1/2 -translate-y-1/2"
               href="#"
+              id="forgotPasswordBtn"
               >Forgot?</a
             >
           </div>
-          <button type="submit" class="bg-[#fd0]">Log in</button>
+          <div>
+            <input
+              class="hidden"
+              type="password"
+              placeholder="Confirm Password"
+              autocomplete="new-password"
+              id="confirmPassword"
+            />
+          </div>
+          <button type="submit" class="bg-[#fd0] signupinBtn">Log in</button>
         </form>
-        <div class="modal__footer">
-          New to iTicket.az? <a href="">Sign up now</a>
+        <div class="flex gap-1 justify-center">
+          <div class="modal__footer">New to iTicket.az?</div>
+          <a id="registerNowBtn" class="cursor-pointer modal__footer"
+            >Sign up now</a
+          >
         </div>
       </div>
     </div>
@@ -520,5 +560,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/argon2-browser/1.18.0/argon2-bundled.min.js"></script>
   </body>
 </html>

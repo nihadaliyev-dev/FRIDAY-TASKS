@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EventVibe - Home</title>
+    <title>iTicket.az - Admin</title>
     <link rel="stylesheet" href="../styles/css/app.css" />
     <link rel="stylesheet" href="../styles/tailwindcss/output.css" />
 
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <script src="../constants/constants.js" type="module" defer></script>
-    <script src="../services/services.js" type="module" defer></script>
-    <script src="../scripts/index.js" type="module" defer></script>
+    <!-- <script src="../services/services.js" type="module" defer></script>
+    <script src="../scripts/index.js" type="module" defer></script>-->
+    <script src="./scripts/index.js" type="module" defer></script>
+    <script src="./scripts/app.js" type="module" defer></script>
   </head>
   <body class="bg-[#101218]">
     <!-- <div
@@ -313,7 +315,7 @@
             ></a>
           </div>
           <div class="flex flex-col gap-4 w-full admin__sideBar__main">
-            <button class="admin__sideBar__button">
+            <button class="admin__sideBar__button" id="admin__eventsBtn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24px"
@@ -327,7 +329,7 @@
                 /></svg
               >Events
             </button>
-            <button class="admin__sideBar__button">
+            <button class="admin__sideBar__button" id="admin__usersBtn">
               <svg
                 width="24px"
                 height="24px"
@@ -372,7 +374,7 @@
           </div>
         </div>
         <div class="flex flex-col gap-5 w-full admin__sideBar__bottom">
-          <button class="admin__sideBar__button">
+          <button class="admin__sideBar__button" id="admin__logoutBtn">
             <svg
               width="24px"
               height="24px"
@@ -389,7 +391,7 @@
               /></svg
             >Logout
           </button>
-          <button class="admin__sideBar__button">
+          <button class="admin__sideBar__button" id="admin__settingsBtn">
             <svg
               width="24px"
               height="24px"
@@ -420,7 +422,92 @@
         </div>
       </div>
       <div class="w-full h-full !p-6 admin__content__main">
-        <div class="w-full h-full rounded-2xl bg-gray-800 admin__content"></div>
+        <div class="w-full h-full rounded-2xl overflow-y-scroll admin__content">
+          <div
+            class="text-3xl font-bold text-white !p-6 shadow shadow-[#ffffff25] admin__content__header"
+          >
+            Events
+          </div>
+          <div class="!p-6 admin__content__content">
+            <div class="flex !mb-6 justify-end admin__events__header">
+              <button
+                class="!p-3 flex items-center rounded-lg text-xl font-bold text-white gap-2 border-2"
+              >
+                <svg
+                  fill="#fbfbfb"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 45.402 45.402"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M41.267,18.557H26.832V4.134C26.832,1.851,24.99,0,22.707,0c-2.283,0-4.124,1.851-4.124,4.135v14.432H4.141
+                 c-2.283,0-4.139,1.851-4.138,4.135c-0.001,1.141,0.46,2.187,1.207,2.934c0.748,0.749,1.78,1.222,2.92,1.222h14.453V41.27
+                 c0,1.142,0.453,2.176,1.201,2.922c0.748,0.748,1.777,1.211,2.919,1.211c2.282,0,4.129-1.851,4.129-4.133V26.857h14.435
+                 c2.283,0,4.134-1.867,4.133-4.15C45.399,20.425,43.548,18.557,41.267,18.557z"
+                    />
+                  </g></svg
+                >Add Event
+              </button>
+            </div>
+            <div class="flex flex-col gap-4 -z-0 admin__content__content__main">
+              <div
+                class="w-full shadow-lg border-2 border-white rounded-2xl shadow-[#ffffff25] flex items-center gap-3 !p-3 justify-between admin__event"
+              >
+                <div class="flex items-center">
+                  <div class="w-[128px] h-[128px] admin__eventBanner">
+                    <img
+                      class="w-[128px] h-[128px] rounded-2xl"
+                      src="../images/banner_1.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="w-full h-full rounded-2xl flex items-center !p-3 justify-between admin__event"
+                >
+                  <div class="text-white text-lg admin__eventName">
+                    Event Name
+                  </div>
+                  <div class="text-white text-lg admin__eventDate">
+                    Event Date
+                  </div>
+                  <div class="text-white text-lg admin__eventVenue">Venue</div>
+                  <div class="admin__eventDetailsBtn">
+                    <button
+                      class="!p-4 rounded-lg border-2 border-white admin__eventDetailsBtn__btn"
+                    >
+                      <svg
+                        fill="#fbfbfb"
+                        height="18px"
+                        width="18px"
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 330 330"
+                        xml:space="preserve"
+                      >
+                        <path
+                          id="XMLID_222_"
+                          d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+               c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+               C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+               C255,161.018,253.42,157.202,250.606,154.389z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 

@@ -55,3 +55,39 @@ const registerCloseBtn = document.querySelector("#registerCloseBtn");
 registerCloseBtn.addEventListener("click", (e) => {
   signinupDisplay();
 });
+
+export function registerDisplay() {
+  const modal__header = document.querySelector(".modal__header");
+  const modal__footer = document.querySelector(".modal__footer");
+  const registerNowBtn = document.querySelector("#registerNowBtn");
+
+  const signupinBtn = document.querySelector(".signupinBtn");
+  const forgotPasswordBtn = document.querySelector("#forgotPasswordBtn");
+
+  const nameInput = document.querySelector("#name");
+  const surnameInput = document.querySelector("#surname");
+  const phoneInput = document.querySelector("#phone");
+  const confirmPasswordInput = document.querySelector("#confirmPassword");
+
+  if (signupinBtn.innerHTML == "Log in") {
+    // changing to register modal
+    modal__header.textContent = "Register";
+    signupinBtn.textContent = "Register";
+
+    modal__footer.textContent = "Already Registered?";
+    registerNowBtn.textContent = "Sign in here";
+  } else {
+    // changing to login modal
+    modal__header.textContent = "Login";
+    signupinBtn.textContent = "Log in";
+
+    modal__footer.textContent = "New to iTicket.az?";
+    registerNowBtn.textContent = "Sign up now";
+  }
+
+  forgotPasswordBtn.classList.toggle("hidden");
+  nameInput.classList.toggle("hidden");
+  surnameInput.classList.toggle("hidden");
+  phoneInput.classList.toggle("hidden");
+  confirmPasswordInput.classList.toggle("hidden");
+}
