@@ -1,16 +1,47 @@
-import { registerDisplay } from "./index.js";
+import { registerDisplay, signinupDisplay } from "./index.js";
 import { BASE_URL, endpoints } from "../constants/constants.js";
 
+const registerBtn = document.querySelector("#registerBtn");
+function loginSuccesful() {
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (user) {
+    registerBtn.classList.toggle("hidden");
+    profileBtn.classList.toggle("hidden");
+    profileBtn.addEventListener("click", (e) => {
+      if (user.role == "admin") {
+        window.location.replace("./src/assets/admin/index.html");
+      } else {
+        window.location.replace("./profile.html");
+      }
+    });
+  }
+}
+
+loginSuccesful();
+
 async function accountLogin(email, password) {
-  const response = await axios.get(`${BASE_URL}/${endpoints.users}`);
-  const data = response.data;
-  data.forEach((user) => {
-    if (user.email == email && user.password == password) {
-      console.log("Login successful!");
+  try {
+    const response = await axios.get(`${BASE_URL}/${endpoints.users}`);
+    const users = response.data;
+    const status = users.find(
+      (user) => user.email == email && user.password == password
+    );
+
+    if (status) {
+      // signed in
+      if (status.role == "admin") {
+        window.location.replace("./src/assets/admin/index.html");
+      }
+      localStorage.setItem("user", JSON.stringify(status));
+      loginForm.reset();
+      signinupDisplay();
+    } else {
+      // wrong email or password
+      alert("Wrong email or password");
     }
-  });
-  console.log(data);
-  console.log(email, password);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 async function accountRegister(
@@ -41,11 +72,13 @@ async function accountRegister(
   const user = {
     name,
     surname,
+    username: name + "_" + surname,
     phone,
     email,
     password,
     confirmPassword,
-    profilePictureURL: "",
+    role: "client",
+    profilePictureURL: "../images/default_profile.jpg",
     balance: 0,
     favorites: [],
     accountCreationDate: formattedDateTime,

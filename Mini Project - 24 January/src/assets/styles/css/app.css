@@ -127,7 +127,6 @@
   padding: 20px;
 }
 #banner .banner__main {
-  background-color: rgba(0, 0, 255, 0.457);
   border-radius: 20px;
 }
 #banner .banner__main .navbar {
@@ -196,6 +195,11 @@
   top: 0;
   transform: translateX(-50%) rotate(-33deg);
   width: 200vw;
+  z-index: -1;
+}
+
+#profileBtn svg {
+  fill: #fbfbfb;
 }
 
 .admin__sideBar__button {
@@ -272,6 +276,37 @@
   background: #ffdc00;
   border-radius: 4px;
   box-shadow: 0px 0px 12px #ffdc00;
+}
+
+#admin__eventForm > div input,
+#admin__eventForm > div select,
+#admin__eventForm > div button {
+  padding: 12px 20px;
+  border: 2px solid #fbfbfb;
+  border-radius: 12px;
+  background-color: rgba(251, 251, 251, 0.1254901961);
+  outline: none;
+  color: #fbfbfb;
+  transition: all ease-in-out 400ms;
+}
+#admin__eventForm > div input:focus,
+#admin__eventForm > div select:focus,
+#admin__eventForm > div button:not(:last-child):hover {
+  background-color: #fbfbfb;
+  color: #212121;
+}
+#admin__eventForm > div label {
+  color: #fbfbfb;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+#admin__eventForm button[type=submit] {
+  border-color: #ffdc00;
+}
+#admin__eventForm button[type=submit]:hover {
+  background-color: #ffdc00;
+  color: #212121;
 }
 
 html * {

@@ -421,7 +421,83 @@
           </button>
         </div>
       </div>
-      <div class="w-full h-full !p-6 admin__content__main">
+      <div class="w-full h-full !p-6 relative admin__content__main">
+        <div
+          class="w-full h-full bg-[#000000f0] absolute !-m-6 flex justify-center items-center hidden"
+          id="admin__eventForm__div"
+        >
+          <button class="absolute top-0 right-0 !p-5" id="closeEventForm">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 50"
+              width="24px"
+              height="24px"
+              fill="#fbfbfb"
+            >
+              <path
+                d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
+              />
+            </svg>
+          </button>
+          <form
+            class="grid grid-cols-2 gap-[24px]"
+            id="admin__eventForm"
+            action=""
+          >
+            <div class="flex flex-col gap-3">
+              <label for="admin__eventForm__category">Event Category</label>
+              <select name="" id="admin__eventForm__category">
+                <option value="none" hidden>Select Category</option>
+              </select>
+              <label for="admin__eventForm__name">Event Name</label>
+              <input type="text" id="admin__eventForm__name" required />
+              <label for="admin__eventForm__date">Event Date</label>
+              <input
+                type="datetime-local"
+                id="admin__eventForm__date"
+                required
+              />
+              <label for="admin__eventForm__description"
+                >Event Description</label
+              >
+              <input type="text" id="admin__eventForm__description" />
+              <label for="admin__eventForm__venue">Event Venue</label>
+              <select name="" id="admin__eventForm__venue" required>
+                <option value="none" hidden>Select Venue</option>
+              </select>
+              <label for="admin__eventForm__image">Event Image</label>
+              <input type="file" id="admin__eventForm__image" required />
+            </div>
+            <div class="flex flex-col gap-3">
+              <label for="admin__eventForm__organizer">Event Organizer</label>
+              <input type="text" id="admin__eventForm__organizer" required />
+              <label for="admin__eventForm__avaiableTickets"
+                >Ticket Count</label
+              >
+              <input
+                type="text"
+                id="admin__eventForm__avaiableTickets"
+                required
+              />
+              <label for="admin__eventForm__price">Ticket Price</label>
+              <input type="text" id="admin__eventForm__price" required />
+              <label for="admin__eventForm__duration">Event Duration</label>
+              <input type="text" id="admin__eventForm__duration" required />
+              <label for="admin__eventForm__ageRestriction"
+                >Age Restriction</label
+              >
+              <select name="" id="admin__eventForm__ageRestriction">
+                <option value="norestriction">No Age Restriction</option>
+                <option value="2plus">2+</option>
+                <option value="6plus">6+</option>
+                <option value="12plus">12+</option>
+                <option value="16plus">16+</option>
+                <option value="18plus">18+</option>
+              </select>
+              <button class="!mt-[34px]" type="submit">Add Event</button>
+            </div>
+          </form>
+        </div>
         <div class="w-full h-full rounded-2xl overflow-y-scroll admin__content">
           <div
             class="text-3xl font-bold text-white !p-6 shadow shadow-[#ffffff25] admin__content__header"
@@ -432,6 +508,7 @@
             <div class="flex !mb-6 justify-end admin__events__header">
               <button
                 class="!p-3 flex items-center rounded-lg text-xl font-bold text-white gap-2 border-2"
+                id="admin__addEvent"
               >
                 <svg
                   fill="#fbfbfb"
@@ -456,7 +533,7 @@
               </button>
             </div>
             <div class="flex flex-col gap-4 -z-0 admin__content__content__main">
-              <div
+              <!-- <div
                 class="w-full shadow-lg border-2 border-white rounded-2xl shadow-[#ffffff25] flex items-center gap-3 !p-3 justify-between admin__event"
               >
                 <div class="flex items-center">
@@ -504,7 +581,7 @@
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

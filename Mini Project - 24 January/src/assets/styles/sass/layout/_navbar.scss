@@ -1,7 +1,7 @@
 #banner {
   padding: 20px;
   .banner__main {
-    background-color: rgba(0, 0, 255, 0.457);
+    // background-color: rgba(0, 0, 255, 0.457);
     border-radius: 20px;
     .navbar {
       padding: 32px 42px 0px 42px;
@@ -88,4 +88,11 @@
   top: 0;
   transform: translateX(-50%) rotate(-33deg);
   width: 200vw;
+  z-index: -1;
+}
+
+#profileBtn {
+  svg {
+    fill: #fbfbfb;
+  }
 }

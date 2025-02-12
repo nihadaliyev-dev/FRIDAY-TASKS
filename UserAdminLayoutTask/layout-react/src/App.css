@@ -1,0 +1,10 @@
+a.admin.active {
+  border: 2px solid white;
+  color: white;
+  border-radius: 8px;
+}
+a.client.active {
+  color: black;
+  border: 2px solid black;
+  border-radius: 8px;
+}

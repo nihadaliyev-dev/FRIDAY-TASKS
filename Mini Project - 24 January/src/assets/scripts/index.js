@@ -91,3 +91,66 @@ export function registerDisplay() {
   phoneInput.classList.toggle("hidden");
   confirmPasswordInput.classList.toggle("hidden");
 }
+
+function profileContentDisplay(content) {
+  const signinupModal = document.querySelector(".profile__content__main");
+  if (content.toLowerCase() == "account") {
+    const contentDiv = document.createElement("div");
+    const profile__content__header = document.querySelector(
+      ".profile__content__header"
+    );
+
+    profile__content__header.textContent = "Account";
+
+    contentDiv.className = "w-full profile__content__main";
+
+    contentDiv.innerHTML = `<div class="w-full profile__content__main">
+                <div
+                  class="text-3xl font-bold text-black !p-6 shadow shadow-[#ffffff25] profile__content__header"
+                >
+                  Account
+                </div>
+                <div class="w-full h-[1px] bg-[#00000025] hr"></div>
+                <div class="!p-6 profile__content__content">
+                  <div class="flex flex-col profile__content__content__main">
+                    <div class="flex flex-col gap-4">
+                      <div class="flex items-center justify-between">
+                        <p class="text-lg font-medium">Profile Image</p>
+                        <input type="file" />
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <p class="text-lg font-medium">User Name</p>
+                        <input
+                          type="text"
+                          class="border-2 border-[#00000025] rounded-md p-2"
+                        />
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <p class="text-lg font-medium">User Surname</p>
+                        <input
+                          type="text"
+                          class="border-2 border-[#00000025] rounded-md p-2"
+                        />
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <p class="text-lg font-medium">Email</p>
+                        <input
+                          type="text"
+                          class="border-2 border-[#00000025] rounded-md p-2"
+                        />
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <p class="text-lg font-medium">Password</p>
+                        <button class="bg-[#FFDD00] text-black font-bold p-2 rounded-md">
+                          Change
+                        </button>
+                      </div>
+                  </div>
+                </div>
+              </div>`;
+  } else if (content.toLowerCase() == "favorites") {
+  } else if (content.toLowerCase() == "settings") {
+  }
+}
+
+export { signinupDisplay };
