@@ -26,4 +26,23 @@ const deleteProductAsync = async (id) => {
     console.log(error);
   }
 };
-export { getProducts, getProductsById, deleteProductAsync };
+
+const addNewProductAsync = async (title, description, image, price) => {
+  const newProduct = {
+    title,
+    description,
+    image,
+    price,
+  };
+  try {
+    const response = axios.post(
+      `${BASE_URL}/${endpoints.products}`,
+      newProduct
+    );
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { getProducts, getProductsById, deleteProductAsync, addNewProductAsync };

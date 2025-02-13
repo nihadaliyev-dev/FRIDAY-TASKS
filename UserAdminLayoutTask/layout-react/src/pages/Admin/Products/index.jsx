@@ -1,8 +1,27 @@
 import PropTypes from "prop-types";
 import AdminProductsTable from "./AdminProductsTable";
+import { BASE_URL, endpoints } from "../../../constants";
+import axios from "axios";
 // import { deleteProductAsync } from "../../../services/services";
 
 const Products = ({ products, setProducts }) => {
+  console.log(products);
+
+  const handleDelete = (id) => {
+    const updatedProducts = products.filter((product) => product.id !== id);
+    setProducts(updatedProducts);
+
+    try {
+      axios.delete(`${BASE_URL}/${endpoints.products}/${id}`);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleEdit = (id) => {
+    console.log(id);
+  };
+
   return (
     <section className="flex justify-center">
       <div className="container">
@@ -13,7 +32,8 @@ const Products = ({ products, setProducts }) => {
           <div>
             <AdminProductsTable
               products={products}
-              setProducts={setProducts}
+              onDelete={handleDelete}
+              onEdit={handleEdit}
             ></AdminProductsTable>
             {/* <table>
               <thead>
