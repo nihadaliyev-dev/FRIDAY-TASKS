@@ -58,6 +58,14 @@ const Header = () => {
                 Cart
               </NavLink>
             </li>
+            <li className="py-2 px-3">
+              <NavLink
+                className="px-3 py-2 text-[#212121] border-[1.5px] rounded-[20px] border-transparent transition-all duration-300 client bg-red-100"
+                to={"/admin"}
+              >
+                Admin
+              </NavLink>
+            </li>
             <li className="py-2 px-3 ">
               <button
                 className="text-[#212121] border-[1.5px] rounded-[20px] border-transparent transition-all duration-300 pt-[1px] client"
