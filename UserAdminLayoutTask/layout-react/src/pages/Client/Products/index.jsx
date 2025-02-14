@@ -1,8 +1,15 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router";
+
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FavoritesContext } from "../../../context/FavoritesContext";
+
 const Products = ({ products }) => {
   const [inputValue, setInputValue] = useState("");
+
+  const { favoriteProds, toggleFavorites } = useContext(FavoritesContext);
+
   const handleSearch = (e) => {
     const searchValue = e.target.value.trim().toLowerCase();
     setInputValue(searchValue);
@@ -22,16 +29,33 @@ const Products = ({ products }) => {
 
           <div className="grid gap-5 grid-cols-5">
             {products.map((product) => (
-              <Link
-                to={`${product.id}`}
-                className="p-4 shadow-lg rounded-lg"
+              <div
                 key={product?.id}
+                className="p-4 shadow-lg rounded-lg relative"
               >
-                <img src={product?.image} alt={product?.title} />
-                <p>{product?.title}</p>
-                <p>{product?.price}</p>
-                <p>{product?.rating?.rate}</p>
-              </Link>
+                <button
+                  className="absolute p-2 right-2 z-2"
+                  onClick={() => {
+                    toggleFavorites(product);
+                  }}
+                >
+                  {favoriteProds.includes(product) ? (
+                    <FaHeart className="text-red-500" />
+                  ) : (
+                    <FaRegHeart className="text-red-500" />
+                  )}
+                </button>
+                <Link to={`${product.id}`}>
+                  <img
+                    className="p-3"
+                    src={product?.image}
+                    alt={product?.title}
+                  />
+                  <p>{product?.title}</p>
+                  <p>{product?.price}</p>
+                  <p>{product?.rating?.rate}</p>
+                </Link>
+              </div>
             ))}
           </div>
         </div>

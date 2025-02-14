@@ -16,6 +16,8 @@ import Page404 from "./pages/Client/Page404";
 
 import { getProducts } from "./services/services";
 import { useEffect, useState } from "react";
+import Favorites from "./pages/Client/Favorites";
+import ShoppingCart from "./pages/Client/ShoppingCart";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -43,6 +45,8 @@ function App() {
               element={<ProductDetails products={products} />}
             ></Route>
           </Route>
+          <Route path="favorites" element={<Favorites />} />
+          <Route path="cart" element={<ShoppingCart />} />
         </Route>
 
         {/* Admin Layout */}

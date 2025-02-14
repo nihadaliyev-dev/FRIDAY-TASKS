@@ -8,6 +8,7 @@ import Footer from "./layouts/Footer";
 import "./App.css";
 import ProductDetails from "./components/ProductDetails";
 import Products from "./components/Products";
+// import ToDoList from "./components/ToDoList";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Route path="*" element={<h3>Not found!</h3>}></Route>
       </Routes>
       <Footer />
+
+      {/* <ToDoList /> */}
     </>
   );
 }
