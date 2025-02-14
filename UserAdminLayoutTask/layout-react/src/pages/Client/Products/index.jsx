@@ -1,10 +1,25 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import { Link } from "react-router";
 const Products = ({ products }) => {
+  const [inputValue, setInputValue] = useState("");
+  const handleSearch = (e) => {
+    const searchValue = e.target.value.trim().toLowerCase();
+    setInputValue(searchValue);
+  };
+
   return (
     <>
       <section className="flex justify-center py-8 products">
         <div className="container">
+          <div>
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => handleSearch(e)}
+            />
+          </div>
+
           <div className="grid gap-5 grid-cols-5">
             {products.map((product) => (
               <Link
@@ -15,7 +30,7 @@ const Products = ({ products }) => {
                 <img src={product?.image} alt={product?.title} />
                 <p>{product?.title}</p>
                 <p>{product?.price}</p>
-                <p>{product?.rating.rate}</p>
+                <p>{product?.rating?.rate}</p>
               </Link>
             ))}
           </div>
