@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:9998";
+const BASE_URL = "https://one2-march-t5uc.onrender.com/";
 const endpoints = {
   blogs: "api/blogs",
   categories: "api/categories",
