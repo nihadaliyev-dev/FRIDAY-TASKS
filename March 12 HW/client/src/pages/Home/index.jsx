@@ -31,6 +31,7 @@ function Home() {
   const getAllBlogs = async () => {
     try {
       setLoading(true);
+      console.log(loading);
       const query = `title=${searchQuery}&page=${page}&limit=${limit}${
         sortQuery ? "&" + sortQuery : ""
       }`;
@@ -68,7 +69,7 @@ function Home() {
       console.log(error);
     }
   };
-  
+
   const submitForm = async (e) => {
     e.preventDefault();
     try {
@@ -124,7 +125,7 @@ function Home() {
     handlePaginationBtns(pageCount);
   }, [pageCount]);
 
-  if (loading && blogs.length === 0) {
+  if (loading || blogs.length === 0) {
     return (
       <div className="flex justify-center items-center h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
@@ -271,7 +272,12 @@ function Home() {
             </div>
           </div>
 
-          <Pagination btnsMapArr={btnsMapArr} page={page} setPage={setPage} />
+          <Pagination
+            btnsMapArr={btnsMapArr}
+            page={page}
+            setPage={setPage}
+            setIsLoading={setLoading}
+          />
         </div>
       </div>
     </div>

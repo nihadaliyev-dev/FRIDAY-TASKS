@@ -1,4 +1,4 @@
-const Pagination = ({ btnsMapArr, page, setPage }) => {
+const Pagination = ({ btnsMapArr, page, setPage, setIsLoading }) => {
   return (
     <div className="flex gap-2 items-center self-center">
       {btnsMapArr.map((pageNumber) => (
@@ -9,7 +9,10 @@ const Pagination = ({ btnsMapArr, page, setPage }) => {
               ? "bg-cyan-400 shadow-cyan-400 text-white scale-110"
               : ""
           }`}
-          onClick={() => setPage(pageNumber)}
+          onClick={() => {
+            setPage(pageNumber);
+            setIsLoading(true);
+          }}
         >
           {pageNumber}
         </button>
