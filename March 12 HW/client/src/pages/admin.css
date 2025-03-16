@@ -1,0 +1,15 @@
+.adminForm {
+  animation-name: transition;
+  animation-duration: 800ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes transition {
+  from {
+    top: -25%;
+  }
+  to {
+    top: 50%;
+  }
+}

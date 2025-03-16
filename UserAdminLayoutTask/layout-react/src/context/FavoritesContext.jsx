@@ -1,30 +1,33 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-export const FavoritesContext = createContext([]);
+export const FavoritesContext = createContext(null);
 
 const FavoritesProvider = ({ children }) => {
-  const storedProds = localStorage.getItem("favoriteProds") || [];
-
+  const storedProds = JSON.parse(localStorage.getItem("favoriteProds")) || [];
+  
   const [favoriteProds, setFavoriteProds] = useState(storedProds);
 
-  const toggleFavorites = (book) => {
-    const idx = favoriteProds.findIndex((favProd) => favProd.id === book.id);
+  const toggleFavorites = (product) => {
+    setFavoriteProds((prevFavs) => {
+      const isExisting = prevFavs.some((favProd) => favProd.id === product.id);
 
-    console.log(favoriteProds);
-    if (idx === -1) {
-      setFavoriteProds([...favoriteProds, book]);
-    } else {
-      setFavoriteProds(
-        favoriteProds.filter((favProd) => favProd.id !== book.id)
-      );
-    }
-    // localStorage.setItem("favoriteProds", favoriteProds);
+      if (isExisting) {
+        return prevFavs.filter((favProd) => favProd.id !== product.id);
+      } else {
+        return [...prevFavs, product];
+      }
+    });
   };
 
   const clearAllFavs = () => {
     setFavoriteProds([]);
   };
+
+  // Sync favoriteProds with localStorage
+  useEffect(() => {
+    localStorage.setItem("favoriteProds", JSON.stringify(favoriteProds));
+  }, [favoriteProds]);
 
   return (
     <FavoritesContext.Provider
@@ -36,7 +39,7 @@ const FavoritesProvider = ({ children }) => {
 };
 
 FavoritesProvider.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.node.isRequired,
 };
 
 export default FavoritesProvider;

@@ -46,7 +46,7 @@ const Header = () => {
               >
                 Favorites{" "}
                 <sup className="bg-red-500 rounded-full px-1.5 py-[1px] text-white">
-                  {favoriteProds.length}
+                  {favoriteProds?.length}
                 </sup>
               </NavLink>
             </li>
